@@ -1,0 +1,3 @@
+destinations='[{"name":"apihub_sandbox","url":"https://apihub_sandbox.dest","proxyHost":"http://127.0.0.1","proxyPort":"8887"}]'
+cds_requires='{"BusinessPartnerA2X":{"impl":"@sap/cds/srv/remote-service.js","external":true,"kind":"odata-v2","model":"srv/external/BusinessPartnerA2X","csrf":true,"csrfInBatch":true,"credentials":{"path":"s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER","destination":"apihub_sandbox"}},"auth":{"strategy":"dummy","kind":"dummy"}}'
+VCAP_SERVICES='{}'
