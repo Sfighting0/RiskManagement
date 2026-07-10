@@ -1,0 +1,10 @@
+{
+  "name": "RiskAdmin",
+  "description": "Risk Management Full Access Role",
+  "scope-grants": [
+    {
+      "service": "RiskManagementService",
+      "scopes": ["*"]
+    }
+  ]
+}
