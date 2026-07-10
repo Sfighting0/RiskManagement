@@ -6,10 +6,12 @@
     "@sap/cds": "^9",
     "@sap-cloud-sdk/connectivity": "^4",
     "@sap-cloud-sdk/http-client": "^4",
-    "@sap-cloud-sdk/resilience": "^4"
+    "@sap-cloud-sdk/resilience": "^4",
+    "@sap/xssec": "^4"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2.4",
+    "@sap/cds-dk": "^9",
     "@sap/dev-cap-tools": "^1.31.0",
     "cds-plugin-ui5": "^0.17.0"
   },
@@ -24,11 +26,17 @@
       "users": {
         "risk.manager@company.com": {
           "password": "password",
-          "roles": ["RiskManager", "authenticated-user"]
+          "roles": [
+            "RiskManager",
+            "authenticated-user"
+          ]
         },
         "risk.viewer@company.com": {
           "password": "password",
-          "roles": ["RiskViewer", "authenticated-user"]
+          "roles": [
+            "RiskViewer",
+            "authenticated-user"
+          ]
         }
       }
     },
@@ -43,6 +51,9 @@
         },
         "csrf": true,
         "csrfInBatch": true
+      },
+      "[production]": {
+        "auth": "xsuaa"
       }
     }
   },
